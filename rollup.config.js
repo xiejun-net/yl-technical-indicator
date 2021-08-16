@@ -1,5 +1,5 @@
 import typescript from 'rollup-plugin-typescript';
-// import { uglify } from 'rollup-plugin-uglify'
+import { uglify } from 'rollup-plugin-uglify'
 import pkg from './package.json'
 
 export default {
@@ -20,6 +20,6 @@ export default {
   ],
   plugins: [
     typescript({lib: ["es5", "es6"], target: "es5"}), // typescript 在 babel之前
-    // uglify(),
+    uglify(),
   ]
 };
