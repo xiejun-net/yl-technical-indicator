@@ -32,3 +32,15 @@ improt { MACD } from 'yl-technical-indicator'
 let res = MACD(dataList, params = [])
 
 ```
+
+### commonjs
+
+```
+<script src="../lib/bundle.cjs.js"></script>
+
+<script>
+var ylIndicator = window[`ylIndicator`];
+var result = ylIndicator.WR(data, [6, 10]);
+console.log('result==>', ylIndicator, result)
+</script>
+```
