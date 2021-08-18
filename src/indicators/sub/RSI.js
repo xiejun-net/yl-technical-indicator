@@ -1,9 +1,9 @@
 import { SMA, MAX, ABS } from '../../utils/index'
 
-export function RSI(data){
-    let RSI_N1 = this.get('N1'),
-        RSI_N2 = this.get('N2'),
-        RSI_N3 = this.get('N3'),
+export function RSI(data, calcParams = [6, 12, 24]){
+    let RSI_N1 = calcParams[0],
+        RSI_N2 = calcParams[1],
+        RSI_N3 = calcParams[2],
         close,
         lc,
         r,
@@ -41,9 +41,7 @@ export function RSI(data){
         item.push({
             ['RSI'+RSI_N1]: r,
             ['RSI'+RSI_N2]: s,
-            ['RSI'+RSI_N3]: i,
-            A: 20,
-            D: 80
+            ['RSI'+RSI_N3]: i
         })
     }
 

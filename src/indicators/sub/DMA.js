@@ -46,7 +46,7 @@
             dmaSum += dif
             if (i >= maxParam + calcParams[2] - 2) {
                 dma.AMA = dmaSum / calcParams[2]
-                dmaSum -= result[i - (calcParams[2] - 1)].dma
+                dmaSum -= result[i - (calcParams[2] - 1)].DMA
             }
         }
         result.push({
