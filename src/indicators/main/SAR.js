@@ -1,5 +1,10 @@
 import { MIN, MAX } from '../../utils'
 
+const FLAGE = {
+    SHORT: 1,
+    LONG: 0
+}
+
 export function SAR(data, calcParams = [ 4, 2, 20]){
     let maOption = calcParams
     let preSip
